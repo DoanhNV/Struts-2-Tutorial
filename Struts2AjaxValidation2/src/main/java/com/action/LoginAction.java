@@ -27,13 +27,10 @@ public class LoginAction extends ActionSupport {
 	private InputStream inputStream;
 
 	public String login() {
-		String userName = this.userName;
-		String password = this.password;
 		Map<String, String> resultMap = new HashMap<String, String>();
-		resultMap.put("userName", "123");
-		resultMap.put("password", "123");
+		resultMap.put("userName", "ngovandoanh");
+		resultMap.put("password", "admin");
 		String encode = JSON.encode(resultMap);
-		ByteArrayOutputStream byteStream = new ByteArrayOutputStream();
 		try {
 			inputStream = new ByteArrayInputStream(encode.getBytes("UTF-8"));
 		} catch (UnsupportedEncodingException e) {
