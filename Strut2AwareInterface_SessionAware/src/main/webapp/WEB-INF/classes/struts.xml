@@ -6,7 +6,6 @@
 	<package name="default" namespace="/" extends="struts-default">
 		<action name="login" class="com.action.LoginAction" method= "login">
 			<result name="success">next1.jsp</result>
-			<result name="error">login.jsp</result>
 		</action>
 		<action name="next1" class="com.action.Next1" method= "next">
 			<result name="success">next2.jsp</result>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "//UNKNOWN/" "unknown.dtd">
+I.Concept
+- In Struts 2 we don't have any http specific object like in servlet.
+=> if we want any http related object in our Action class then we need to implement our action class from Aware interface
+- 9 feature Aware interface:
++ ApplicationAware
++ SessionAware 
++ RequestAware (chỉ tồn tại trong 1 request - only exist in 1 request)
++ ParameterAware  (request parameter)
++ CookieAware
++ PrincipleAware
++ ServletRequestAware
++ ServletResponseAware
++ ServletContextAware (live in when context get desctroyed)
+- All Aware interface provide setter method, my action class must be implemented this method, in the runtime, Struts2 controller
+ will automatically caller setter method and inject required object to action class.
+II. Usage
+- action class:
+				+ implements ApplicationAware
+				+ 	@Override
+			    	public void setApplication(Map m) {
+			        	this.m = m;
+			    	}
+			    + action method: 
+				    public String execute() throws Exception {
+				        m.put("username", ngovandoanh);
+				        m.put("password", admin);
+				        return SUCCESS;
+				    }
++ Jsp:
+				<s:property value="#application.username"/>
