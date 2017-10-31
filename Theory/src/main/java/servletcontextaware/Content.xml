@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE unspecified PUBLIC "//UNKNOWN/" "unknown.dtd">
+- ServletContextAware là interface thuộc tập hợp Aware interface (ServletContextAware không get được request,response).
+- ServletContext đại diện cho servlet, tức là thuộc servlet related. Vì vậy nó chính là Servlet, có đầy đủ các phương
+thức của servlet.
+          eg:
+          	context.setAttribute("userName","admin");
+          	context.getAttribute("userName");
+          	context.getRequestDispatcher("index.jsp").forward(request,response);
+* Note:          	
++ ServletContextAware là servlet related > < ServletActionContext là action related.
++ tất cả Object trong ServletContextAware đều là application Scope

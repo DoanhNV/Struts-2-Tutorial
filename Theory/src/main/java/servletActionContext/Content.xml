@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE unspecified PUBLIC "//UNKNOWN/" "unknown.dtd">
+- nói chung class ServletActionContext dùng để lấy về request,response,actionMapping... mà không cần kế thừa
+ServletResquestAware,ServletResponseAware
+- class không thể implement vì không được định nghĩa constructor
+- các phương thức của class này đều là static:
+			<vidu>
+				HttpServletRequest request = ServletActionContext.getRequest();
+				HttpServletResponse response = ServletActionContext.getResponse();
+				ActionContext context = ServletActionContext.getContext();
+				ActionMapping actionMapping = ServletActionContext.getActionMapping();
+				System.out.println(actionMapping);
+			</vidu>
+*Note :
++ ServletActionContext là action related, còn  ServletContextAware là Servlet related.
++ ActionMapping là class thực hiện việc mapping đến action đang được xử lý.
