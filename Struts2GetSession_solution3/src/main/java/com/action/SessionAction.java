@@ -7,7 +7,7 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
- * Không khả thi
+ * 
  * 
  * @author admin
  */
@@ -34,7 +34,7 @@ public class SessionAction extends ActionSupport {
 		Map<String, Object> sessionMap = ActionContext.getContext().getSession();
 		sessionMap.put(USER_NAME_SESSION, userName);
 		sessionMap.put(PASSWORD_SESSION, password);
-		
+
 		// LOCALE ,don't care it
 		Locale.setDefault(new Locale("vi", "VN"));
 		Locale locale = ActionContext.getContext().getLocale();
