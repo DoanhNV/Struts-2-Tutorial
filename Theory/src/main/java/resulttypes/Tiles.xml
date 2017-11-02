@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE unspecified PUBLIC "//UNKNOWN/" "unknown.dtd">
+1. Concept
+- tiles frame work dùng cho việc customize layout của trang web 
+- Một web page bao gồm (layout,header,footer,left pane,right pane,body...)
+- Việc sử dụng tiles là đặc trưng cho việc viết một chỗ,sử dụng ở nhiều nơi, vì vậy sẽ sinh ra những lợi ích:
++ customize by centralized page
++ resuability
++ easy to editing
++ easy to removing
+
+II. Usage
+- các plugin cần thiết:
++ struts-core hoặc struts-convention
++ struts-tiles
++ servlet-api
++ OGNL 3.9 
+*Note: phiên bản của OGNL cực kỳ quan trọng,nếu không sẽ sinh ra lỗi java.lang.NoSuchMethodError: ognl.SimpleNode.isEvalChain
+- action : action class phải kết thừa từ tiles-default (@ParentPackage("tiles-default") hoặc xml: extends="tiles-default"),
+result trả về phải có type="tiles".
+- tạo file tiles.xml nằm trong trong thư mục WEB-INF và cấu hình nó.
+- file jsp: dùng tiles tag để hiển thị(chọn phần giao diện muốn truyền (vd: body,menu) để truyền vào)

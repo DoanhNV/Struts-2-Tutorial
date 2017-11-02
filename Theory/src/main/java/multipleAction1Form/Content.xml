@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE unspecified PUBLIC "//UNKNOWN/" "unknown.dtd">
+1.Concept
+- Để thực hiện được việc multiple action trong 1 form,phần này gọi là "dynamic method invocation" ta cần:
+*XML based:
+- cách 1 (không custm url):
++ jsp: 
+		<s:form action="login"> // tại dòng này phải xác định 1 action, chỉ cần 1 action bất kỳ là được
+			<s:submit action = "login" value="login"/>
+			<s:submit action = "register" value = "register"/>
+		</s:form>
++ xml: cấu hình như bình thường.	
+
+*Annotation based:
++ jsp:
+		<s:form action="/user/login"> // tại dòng này phải xác định 1 action, chỉ cần 1 action bất kỳ là được
+			<s:submit action = "/user/login" value="login"/>
+			<s:submit action = "/user/register" value = "register"/>
+		</s:form>
+Chú ý: ở phần này dấu "/" đầu action rất quan trọng nếu không có thì tiền tố /user sẽ liên tục tăng lên
+
++ jsp : cấu hình như bình thường :
+		@Action(value = "/doregister", results = { @Result(location = "/user-login.jsp") })
+		
+Tuy nhiên cần chú ý: dấu "/" đầu tiên phần location = "/user-login.jsp", nếu có thì struts tìm từ thư mục root (webapp),
+nếu không có sẽ tìm đến thư mục : WEB-INF/content
