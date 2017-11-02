@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE unspecified PUBLIC "//UNKNOWN/" "unknown.dtd">
+1. Concept
+- có 2 loại config là convention và  annotation:
++ convention có vẻ không khả thi khi thực hiện trên phiên bản mới.
++ annotation cần thư viện Struts convention thay vì Struts core
+2. Usage
+- không nên sử dụng convention
+- Với annotation ,cách cấu hình giống như xml, xem code project Struts2ZeroConfiguration_Annotation

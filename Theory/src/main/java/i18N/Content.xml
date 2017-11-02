@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE unspecified PUBLIC "//UNKNOWN/" "unknown.dtd">
+1.concept
+- i18n = I + (18 character) + N = InternationlizatioN
+- i18n nhằm mục đích thực hiện chuyển đổi ngôn ngữ 
+2.Cách sử dụng:
+- Properties file: có thể tạo 2 loại file, 1 loại nằm trong package chính package chứa Action class dùng nó đó hoặc trong folder resource
+  và đặt tên package tương tự như package của Action class dùng nó. loại 2 nằm trong folder resource root(không cần tạo thêm package).
+	file có dạng:
+  	 	class : LoginAction.java 
+  	 => properties: LoginAction.properties , LoginAction_en.properties,LoginAction_vi.properties.
+- Jsp file:  sử dụng key="keyName" cho các struts tag mà muốn chuyển đổi ngôn ngữ
+	VD: 
+		<s:textfield key="global.username" />
+- Đối với  date (có 2 cách):
++ cách 1: 
+jsp:			 <s:date name="curentDate" format="getText('global.product.date')"/>	
+properties file: global.date.format = MM-dd-yyyy
++ cách 2: (sử dụng giống curency) 
+- Đối với curency:
+jsp:			<s:text name="global.product.cost">
+					<s:param value="productMoney"  />
+				</s:text> 
+properties file: global.product.cost=  {0,number,###,###} VND
+		
+*Note:
++ file properties nếu là tiếng việt thì không được viết key vào dòng đầu tiên,nếu không sẽ không chuyển đổi được.
++ file properties tuyệt đối phải được lưu dưới dạng ANSI , nếu không sẽ dần đến lỗi font (khi chuyển đổi các ngôn 
+ngữ theo UTF-8 encoding như vi,ja,...).
++ file jsp: nhất định phải thêm <%@page contentType="text/html;charset=UTF-8"%> , thẻ meta chỉ dùng cho struts1
++ phải tạo 1 file redirect đến action khi load lần đầu tiên , mục đích để load locale mặc định,nếu không sẽ hiển 
+thị key trực tiếp mà không phải là nội dung.
