@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE unspecified PUBLIC "//UNKNOWN/" "unknown.dtd">
+1.Concept
+- Mục đích: thay thế việc config bằng web.xml  bằng việc config với annotation
+- Điều kiện: servlet api plugin bắt buộc phải từ 3.0 trở nên mới có annotation @WebFilter
+2.Usage
+- class config phải kế thừa từ : StrutsPrepareAndExecuteFilter
+- Annotation sử dụng: @Webfilter() thay thế cho filter-mapping trong web.xml
+					  @Webfilter(filterName = "Struts2", urlPattern = "/*")
+*Note: 
++ khi config theo kiểu này thì file pom.xml sẽ báo lỗi vì kiểu package là war mà không có file web.xml => solution: chuyển package
+về kiểu khác
++ Khi config theo annotation sẽ không có wellcome file list,vì vậy nó sẽ trỏ trực tiếp về webapp/index.* file, có thể giữ lại file
+web.xml để sử dụng welcome-file-list
+					  

@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<s:form action="/admin/login" method="POST">
+	<s:form action="/page/admin/login" method="POST">
 		<s:textfield name="token" label="Token: " />
 		<s:submit value="Login" />
 	</s:form>

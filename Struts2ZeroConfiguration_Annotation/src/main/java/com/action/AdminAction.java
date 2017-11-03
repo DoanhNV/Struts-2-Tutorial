@@ -4,7 +4,7 @@ import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Result;
 
 // custom URL
-@Action(value = "/admin")
+@Action(value = "/page/admin")
 public class AdminAction {
 	private String token;
 

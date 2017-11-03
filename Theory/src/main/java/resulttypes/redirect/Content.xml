@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE unspecified PUBLIC "//UNKNOWN/" "unknown.dtd">
+I.concept
+- redirect result  type dùng cho việc điều hướng request.
+- Để thực hiện chỉ cần trả về type="redirect", location trong result có thể là 1 action(eg: location = "/admin/login") hay 
+1 trang jsp (eg: location = "/login.jsp")

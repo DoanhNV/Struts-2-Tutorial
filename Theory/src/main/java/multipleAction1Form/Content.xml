@@ -17,7 +17,7 @@
 			<s:submit action = "/user/login" value="login"/>
 			<s:submit action = "/user/register" value = "register"/>
 		</s:form>
-Chú ý: ở phần này dấu "/" đầu action rất quan trọng nếu không có thì tiền tố /user sẽ liên tục tăng lên
+Chú ý: ở phần này dấu "/" đầu action file jsp rất quan trọng nếu không có thì tiền tố /user sẽ liên tục tăng lên
 
 + jsp : cấu hình như bình thường :
 		@Action(value = "/doregister", results = { @Result(location = "/user-login.jsp") })
