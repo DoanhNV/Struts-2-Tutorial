@@ -4,7 +4,7 @@
    "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
 	<package name="default" namespace="/" extends="struts-default">
-		<action name="login" method="login" class="com.action.LoginAction">
+		<action name="login" method="login" class="com.controller.LoginAction">
 			<result name="success">index.jsp</result>
 		</action>
 	</package>

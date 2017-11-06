@@ -9,8 +9,8 @@
 </head>
 <body>
 	<s:form action="login" method="POST">
-		<s:textfield name="user.userName" label="UserName: " />
-		<s:textfield name="user.password" label="Password: " />
+		<s:textfield name="userName" label="UserName: " />
+		<s:textfield name="password" label="Password: " />
 		<s:submit value="Login"/>
 	</s:form>
 </body>

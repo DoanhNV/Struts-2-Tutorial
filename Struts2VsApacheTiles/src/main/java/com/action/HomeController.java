@@ -10,13 +10,13 @@ import com.opensymphony.xwork2.ActionSupport;
 @Action(value = "/home")
 public class HomeController extends ActionSupport {
 
-	/**
-	 * serialVersionUID
-	 */
-	private static final long serialVersionUID = 1L;
+    /**
+     * serialVersionUID
+     */
+    private static final long serialVersionUID = 1L;
 
-	@Action(value = "index", results = { @Result(location = "load-success", type = "tiles") })
-	public String loadIndex() {
-		return SUCCESS;
-	}
+    @Action(value = "index", results = { @Result(location = "load-success", type = "tiles") })
+    public String loadIndex() {
+	return SUCCESS;
+    }
 }

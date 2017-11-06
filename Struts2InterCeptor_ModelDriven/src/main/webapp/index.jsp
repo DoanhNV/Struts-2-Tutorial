@@ -9,9 +9,9 @@
 </head>
 <body>
 	<h1>Congratulation, Login successfuly!</h1>
-	money:
-	<s:property value="currency" />
-	birthday:
-	<s:property value="birthday" />
+	UserName:
+	<s:property value="userName" />
+	Password:
+	<s:property value="password" />
 </body>
 </html>

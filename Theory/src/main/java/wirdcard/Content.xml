@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE unspecified PUBLIC "//UNKNOWN/" "unknown.dtd">
+I.Concept
+- wildcard sử dụng cho việc mapping regex với regex hay để lấy tham số qua url
+- có thể lấy tham số qua namespace:
+			@NameSpace("/home/{userId}")
+- có thể lấy tham số qua Action:
+			@Action("/login/{userId}")
+với điều kiện phải khai báo 1 trường userId ở trong action class.
+- Có thể dùng để mapping url (thực hiện trong việc multiple action 1 form):
+			<action name="/admin*" method="{1}" class="...">
+				<result>login.jsp</result>
+			</action>
+- Điều kiện: phải đưa vào các tham số dưới đây(theo annotation hoặc theo xml):
+    initParams = {
+	@WebInitParam(name = "struts.enable.SlashesInActionNames", value = "true"),
+	@WebInitParam(name = "struts.mapper.alwaysSelectFullNamespace", value = "false"),
+	@WebInitParam(name = "struts.patternMatcher", value = "regex") }

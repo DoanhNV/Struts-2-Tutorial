@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.InterceptorRef;
-import org.apache.struts2.convention.annotation.Namespace;
 import org.apache.struts2.convention.annotation.ParentPackage;
 import org.apache.struts2.convention.annotation.Result;
 
@@ -15,43 +14,41 @@ import com.opensymphony.xwork2.ActionSupport;
 @ParentPackage("json-default")
 public class AccountAction extends ActionSupport {
 
-	/**
-	 * serialVersionUID
-	 */
-	private static final long serialVersionUID = 1L;
-	private static final String JSON_TYPE = "json";
-	private List<String> userIds = new ArrayList<String>();
-	private String userName;
-	
-	@Action(value = "/get", interceptorRefs = { @InterceptorRef(value = "json") }, results = {
-			@Result(type = JSON_TYPE) })
-	public String getInfo() {
-		initUserId();
-		return SUCCESS;
-	}
+    /**
+     * serialVersionUID
+     */
+    private static final long serialVersionUID = 1L;
+    private static final String JSON_TYPE = "json";
+    private List<String> userIds = new ArrayList<String>();
+    private String userName;
 
-	public void initUserId() {
-		for (int i = 0; i < 10; i++) {
-			userIds.add("id" + i);
-		}
-	}
+    @Action(value = "/get", interceptorRefs = { @InterceptorRef(value = "json") }, results = {
+	    @Result(type = JSON_TYPE) })
+    public String getInfo() {
+	initUserId();
+	return SUCCESS;
+    }
 
-	public List<String> getUserIds() {
-		return userIds;
+    public void initUserId() {
+	for (int i = 0; i < 10; i++) {
+	    userIds.add("id" + i);
 	}
+    }
 
-	public void setUserIds(List<String> userIds) {
-		this.userIds = userIds;
-	}
+    public List<String> getUserIds() {
+	return userIds;
+    }
 
-	public String getUserName() {
-		return userName;
-	}
+    public void setUserIds(List<String> userIds) {
+	this.userIds = userIds;
+    }
 
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-	
-	
+    public String getUserName() {
+	return userName;
+    }
+
+    public void setUserName(String userName) {
+	this.userName = userName;
+    }
 
 }

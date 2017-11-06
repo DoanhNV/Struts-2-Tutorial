@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE unspecified PUBLIC "//UNKNOWN/" "unknown.dtd">
+I.Concept
+- Để xử lý được url đúng chuẩn(không bị tăng lên, không bị về root localhost,không bị sai mapping):
++ cách 1: sử dụng action trong form,
++ cách 2: dùng session hoặc application lưu domain sau đó thì đưa vào thẻ <a></a> (xem project Strut2Tag_WildCard)
++ cách 3: (có đuôi .action) sử dụng <s:a namespace="namespace_name" action="action_name"></s:a>

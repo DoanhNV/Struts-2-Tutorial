@@ -8,6 +8,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<s:a action="admin/login" >Login</s:a>
+	<s:a action="/admin/login" >Login</s:a>
 </body>
 </html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE unspecified PUBLIC "//UNKNOWN/" "unknown.dtd">
+1.Concept
+- Model driven được sử dụng cho việc transfer data từ tự động từ form, mà không cần viết theo dạng 
+Model_Variable_name.Field_variable_name.
+ eg:
+ 	user.userName = > userName
+ 	use.password => password
+ 2.Usage
+ - Khi sử dụng không cần phương thức getter và setter, và cũng không cần ModelDriven interceptor như 1 số bài
+ tutorial khác hướng dẫn.
+ - Usage:
++ action class: implement từ interface ModelDriven<E>.
++ file jsp: viết trực tiếp field_name mà không cần model_variable_name.field_name

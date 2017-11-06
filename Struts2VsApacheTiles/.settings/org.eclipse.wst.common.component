@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="Struts2VsApacheTiles">
+    <wb-module deploy-name="Strut2ResultTypes_Tiles">
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
-        <property name="context-root" value="Struts2VsApacheTiles"/>
-        <property name="java-output-path" value="/Struts2VsApacheTiles/target/classes"/>
+        <property name="java-output-path" value="/Strut2ResultTypes_Tiles/target/classes"/>
+        <property name="context-root" value="Strut2ResultTypes_Tiles"/>
     </wb-module>
 </project-modules>

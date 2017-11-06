@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE unspecified PUBLIC "//UNKNOWN/" "unknown.dtd">
+I.Concept
+* Note:
++ khi muốn đưa các constant vào mà không có file struts.xml mà thông qua annotation thì thực hiện đưa 
+vào @Webfilter(initParam={}) 
+		eg:
+		initParams = {
+		@WebInitParam(name = "struts.enable.SlashesInActionNames", value = "true"),
+		@WebInitParam(name = "struts.mapper.alwaysSelectFullNamespace", value = "false"),
+		@WebInitParam(name = "struts.patternMatcher", value = "regex") }

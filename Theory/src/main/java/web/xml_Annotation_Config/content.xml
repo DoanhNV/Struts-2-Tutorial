@@ -7,7 +7,9 @@
 - class config phải kế thừa từ : StrutsPrepareAndExecuteFilter
 - Annotation sử dụng: @Webfilter() thay thế cho filter-mapping trong web.xml
 					  @Webfilter(filterName = "Struts2", urlPattern = "/*")
-*Note: 
+*Note:
++ PHẦN QUAN TRỌNG: package mà chứa class action bắt buộc phải đặt là "action" (eg: com/admin/action/AdminController.java), nếu không
+sẽ xảy ra lỗi mapping 
 + khi config theo kiểu này thì file pom.xml sẽ báo lỗi vì kiểu package là war mà không có file web.xml => solution: chuyển package
 về kiểu khác
 + Khi config theo annotation sẽ không có wellcome file list,vì vậy nó sẽ trỏ trực tiếp về webapp/index.* file, có thể giữ lại file
