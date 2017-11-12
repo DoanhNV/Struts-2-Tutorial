@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE unspecified PUBLIC "//UNKNOWN/" "unknown.dtd">
+1. Không nhận url
+- khi action chạy mà server vẫn báo là 404 not found,chú ý xem lib có bị báo đỏ hay không(sai đường dẫn khi đưa từ máy khác
+sang hay vừa đổi tên thư mục khiến project không nhận được đường dẫn).
